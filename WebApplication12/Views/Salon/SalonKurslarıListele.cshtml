@@ -1,0 +1,23 @@
+﻿@using WebApplication12.Models.Entity
+@model List<SalonKurslariListele>
+@{
+    ViewBag.Title = "SalonKurslarıListele";
+    Layout = "~/Views/Shared/_YoneticiLayout.cshtml";
+}
+
+<h2>Salon Kursları Listesi</h2>
+<table class="table table-striped">
+    <tr>
+        <th>Salon Id</th>
+        <th>Kurs Id</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.SalonId</td>
+            <td>@x.KursId</td>
+        </tr>
+    }
+
+</table>
+
